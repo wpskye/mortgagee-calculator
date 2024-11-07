@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- Form Column -->
+        <div class="calculator-form">
+            <h1>Mortgage Calculator</h1>
+            <div class="input-group">
+                <label for="principal">Loan Amount ($):</label>
+                <input type="number" id="principal" placeholder="e.g., 300000">
+            </div>
+            <div class="input-group">
+                <label for="rate">Interest Rate (%):</label>
+                <input type="number" id="rate" step="0.01" placeholder="e.g., 3.5">
+            </div>
+            <div class="input-group">
+                <label for="years">Loan Term (Years):</label>
+                <input type="number" id="years" placeholder="e.g., 30">
+            </div>
+            <div class="input-group">
+                <label for="payment-frequency">Select Payment Frequency:</label>
+                <select id="payment-frequency">
+                    <option value="annual">Annual</option>
+                    <option value="semi-annual">Semi-annual</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="biweekly">Every 2 weeks</option>
+                    <option value="weekly">By the week</option>
+                    <option value="access-2weeks">Access to 2 weeks</option>
+                    <option value="access-week">Access to the week</option>
+                </select>
+            </div>
+            <button class="calculate-button" onclick="calculateMortgage()">Calculate</button>
+        </div>
+
+        <!-- Results Column -->
+        <div class="calculator-results">
+            <div class="results-container">
+                <!-- Total Interest Circle -->
+                <div class="result-circle">
+                    <p>Total Interest</p>
+                    <span id="total-interest">$0.00</span>
+                </div>
+                <!-- Monthly Payment Circle -->
+                <div class="result-circle">
+                    <p>Monthly Payment</p>
+                    <span id="monthly-payment">$0.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
